@@ -1,9 +1,10 @@
-import CoreHaptics
 import Mockable
+import Foundation
 
 @Mockable
 /// A protocol representing a haptic pattern.
-public protocol HapticPatternProtocol {
+/// Based on Apple's `CoreHaptics.CHHapticPattern`
+public protocol HapticPatternDefining {
     /// A dictionary representation of a haptic pattern.
     typealias Definition = [HapticPattern.Key: Any]
     
@@ -15,6 +16,7 @@ public protocol HapticPatternProtocol {
     func export() async throws -> Definition
 }
 
+/// Convenience namespace for haptic pattern related types.
 public enum HapticPattern {
     /// A key that represents a specific value in a haptic pattern dictionary.
     public enum Key: Hashable {
@@ -48,8 +50,5 @@ public enum HapticPattern {
         case time
         /// the version number of a haptic pattern dictionary.
         case version
-
     }
-
 }
-
