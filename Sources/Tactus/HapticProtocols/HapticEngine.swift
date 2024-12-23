@@ -49,6 +49,17 @@ public protocol HapticRunning {
     /// Start the engine and block until the engine has started. This is useful for synchronous initialization
     func startAndReturnError() throws
     
+    /// Simple one-shot call to play a pattern specified by a URL containing a file with a haptic/audio pattern dictionary.
+    ///
+    /// - Note: The engine should be started prior to calling this method if low latency is desired.
+    /// If this is not done, this method will start it, which can cause a significant delay.
+    func playPattern(from url: URL) throws
+    
+    /// Simple one-shot call to play a pattern specified by the provided haptic/audio pattern dictionary `Data`.
+    ///
+    /// - Note: The engine should be started prior to calling this method if low latency is desired.
+    /// If this is not done, this method will start it, which can cause a significant delay.
+    func playPattern(from data: Data) throws
     
     /// Tell the engine to asynchronously call the passed-in handler when all active pattern players associated
     /// with this engine have stopped.
