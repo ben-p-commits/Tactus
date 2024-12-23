@@ -1,7 +1,11 @@
-//
-//  TactusPattern.swift
-//  Tactus
-//
-//  Created by Ben Palmer on 12/19/24.
-//
+import Foundation
 
+struct TactusPattern: HapticPatternDefining {
+    var duration: TimeInterval
+    
+    func export() async throws -> Definition {
+        // TODO: implement
+    }
+    
+    
+}
