@@ -1,13 +1,13 @@
-// swift-tools-version: 5.10
+// swift-tools-version: 6.0
 
 import PackageDescription
 
 let package = Package(
     name: "Tactus",
     platforms: [
-        .iOS(.v15),
-        .macOS(.v12),
-        .watchOS(.v10)
+        .iOS(.v18),
+        .macOS(.v15),
+        .watchOS(.v9)
     ],
     products: [
         .library(

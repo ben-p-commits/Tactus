@@ -9,17 +9,17 @@ struct TactusEngine: HapticRunning {
     
     private let engine: CHHapticEngine
     
-    init() throws {
-        do { self.engine = try CHHapticEngine() }
-    }
-    init(withAudioSession audioSession: AVAudioSession) throws {
-        // TODO: Implement
-    }
-    
-    
-    init(audioSession: AVAudioSession) throws {
-        // TODO: Implement
-    }
+//    init() throws {
+//        do { self.engine = try CHHapticEngine() }
+//    }
+//    init(withAudioSession audioSession: AVAudioSession) throws {
+//        // TODO: Implement
+//    }
+//    
+//    
+//    init(audioSession: AVAudioSession) throws {
+//        // TODO: Implement
+//    }
     
     var capabilitiesForHardware: any HapticDeviceCapability
     
