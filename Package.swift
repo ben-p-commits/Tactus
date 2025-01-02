@@ -16,14 +16,14 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/Kolos65/Mockable", from: "0.2.0"),
-        .package(url: "https://github.com/apple/swift-algorithms", from: "1.2.0")
+        .package(url: "https://github.com/Bersaelor/SwiftSplines", from: "0.3.0")
     ],
     targets: [
         .target(
             name: "Tactus",
             dependencies: [
                 .product(name: "Mockable", package: "Mockable"),
-                .product(name: "Algorithms", package: "swift-algorithms")
+                .product(name: "SwiftSplines", package: "SwiftSplines")
             ],
             swiftSettings: [
                 .define("MOCKING", .when(configuration: .debug))
@@ -34,7 +34,6 @@ let package = Package(
             dependencies: [
                 "Tactus",
                 .product(name: "Mockable", package: "Mockable"),
-                .product(name: "Algorithms", package: "swift-algorithms")
             ]
         ),
     ]
