@@ -78,10 +78,6 @@ struct ChartStyle: ViewModifier {
             .chartXScale(domain: Values.xScale)
             .chartYScale(domain: Values.yScale)
             .frame(height: 200)
-            .background(
-                Color(UIColor.secondarySystemBackground)
-                    .cornerRadius(8)
-            )
     }
 }
 
